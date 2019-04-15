@@ -1,4 +1,4 @@
-FROM ypcs/debian:stretch
+FROM ypcs/debian:buster
 
 RUN /usr/local/sbin/docker-upgrade && \
     apt-get --assume-yes install \
