@@ -11,3 +11,7 @@ RUN /usr/lib/docker-helpers/apt-setup && \
         pdns-server \
         pdns-tools && \
     /usr/lib/docker-helpers/apt-cleanup
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
