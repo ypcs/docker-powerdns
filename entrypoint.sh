@@ -3,7 +3,7 @@ set -e
 
 SCHEMA="/usr/share/pdns-backend-mysql/schema/schema.mysql.sql"
 
-if [ \( -n "${MYSQL_DATABASE}" -a -n "${MYSQL_USER}" -a -n "${MYSQL_PASSWORD}" \) ]
+if [ \( -n "${MYSQL_DATABASE}" -a -n "${MYSQL_USER}" -a -n "${MYSQL_PASSWORD}" -a -n "${MYSQL_HOST}" \) ]
 then
     echo "I: Create database schema (if not exists)."
     sed \
