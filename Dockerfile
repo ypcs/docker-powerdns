@@ -13,6 +13,12 @@ RUN /usr/lib/docker-helpers/apt-setup && \
         pdns-tools && \
     /usr/lib/docker-helpers/apt-cleanup
 
+RUN /usr/lib/docker-helpers/apt-setup && \
+    apt-get --assume-yes install \
+        dnsutils \
+        netcat && \
+    /usr/lib/docker-helpers/apt-cleanup
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
