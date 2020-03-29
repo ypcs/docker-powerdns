@@ -1,4 +1,4 @@
-FROM ypcs/debian:buster
+FROM ypcs/debian:bullseye
 
 ARG APT_PROXY
 
